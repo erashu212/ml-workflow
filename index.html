@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ml-workflow by erashu212</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Ml-workflow</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/erashu212/ml-workflow" class="btn">View on GitHub</a>
+      <a href="https://github.com/erashu212/ml-workflow/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/erashu212/ml-workflow/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="open-source-workflow---ml" class="anchor" href="#open-source-workflow---ml" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Open Source workflow - ML</h1>
+
+<p>I am writing this to introduce you guys with marklogic workflow process.</p>
+
+<ul>
+<li>
+<h2>
+<a id="i-am-new-to-team-what-should-i-do-to-get-the-marklogic-setup-done" class="anchor" href="#i-am-new-to-team-what-should-i-do-to-get-the-marklogic-setup-done" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>I am new to team what should I do to get the marklogic setup done?</h2>
+
+<blockquote>
+<p>First of all welcome to the team, Marklogic has private github repo which is generally shared with globant team working for marklogic.
+I assume you must be having github account with you. (If not do so please register yourself <a href="https://github.com">here</a>).
+Once you have your account with you share your <code>username</code> with your <code>project / team manager</code> to get you assigned in marklogic organization. </p>
+</blockquote>
+</li>
+<li>
+<h2>
+<a id="i-can-see-marklogic-organization-in-my-github-account-what-should-be-the-next-step-to-setup-this-project-on-local-system" class="anchor" href="#i-can-see-marklogic-organization-in-my-github-account-what-should-be-the-next-step-to-setup-this-project-on-local-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>I can see marklogic organization in my github account. What should be the next step to setup this project on local system.</h2>
+
+<blockquote>
+<ul>
+<li>First of all you need to <a href="https://help.github.com/articles/fork-a-repo/">fork</a> this porject <code>(marklogic/ opsdirector)</code> in your github account.</li>
+<li>Let's say your username is <code>abc</code>. Once you are done with forking you will see <code>opsdirector</code> in your local account like <code>abc/opsdirector</code>.</li>
+<li>Now start cloning this <code>abc/opsdirector</code> on your local system.</li>
+<li>Once you are done with cloning , go with readme.md of <code>abc/marklogic</code>.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<h2>
+<a id="opsdirector-setup-is-done-on-my-local-system-what-should-steps-i-should-follow-before-start-of-actual-development" class="anchor" href="#opsdirector-setup-is-done-on-my-local-system-what-should-steps-i-should-follow-before-start-of-actual-development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Opsdirector setup is done on my local system, what should steps I should follow before start of actual development.</h2>
+
+<blockquote>
+<ul>
+<li>As we are following open source workflow, it means each team member will have opsdirector in their account and then they will start coding into their branch.</li>
+<li>It might required that you need to keep yourself in sync with other developer.</li>
+<li>To achieve the same, I would like you to run few commands.</li>
+<li>run <code>git remote -v</code> : this command shows how many remote added.</li>
+<li>run <code>git remote add remote_name remote_url</code> : this commnd will add remote with this <code>remote_name</code>.</li>
+<li>run again <code>git remote -v</code>.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<h2>
+<a id="i-have-setup-the-marklogic-along-with-the-remote-of-each-member-in-my-team-what-to-do-next" class="anchor" href="#i-have-setup-the-marklogic-along-with-the-remote-of-each-member-in-my-team-what-to-do-next" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>I have setup the marklogic along with the remote of each member in my team. What to do next.?</h2>
+
+<blockquote>
+<ul>
+<li>Before start the work for day, we need to run some set of cammand to get the latest changes from remotes.</li>
+<li>run <code>git fetch --all</code>.
+we always make sure that our branch which we are working upon must be rebased on to marklogic develop.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<h2>
+<a id="how-would-i-pull-the-latest-changes-of-marklogicdevelop-or-any-other-remote-branch-into-in-my-current-branch" class="anchor" href="#how-would-i-pull-the-latest-changes-of-marklogicdevelop-or-any-other-remote-branch-into-in-my-current-branch" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How would I pull the latest changes of marklogic/develop or any other remote branch into in my current branch.</h2>
+
+<blockquote>
+<ul>
+<li>I assume you have run <code>git fetch --all</code> to fetch the changes from all remote.
+
+<ul>
+<li>We geneally prefer rebasing the changes whenever we pull the latest changes of any remote into your branch.</li>
+<li>Lets assume you are working on branch <code>feature/abc</code> which is derived from develope branch and you want to merge <code>marklogic/develop</code> changes into this branch. So you can rebase it by running some cammand.</li>
+<li>
+<code>git rebase marklogic/develop</code>.</li>
+<li>Once you run this command you will be prompted with further option on the terminal or screen.</li>
+<li>Once you are done with rebase you can check your commits on the top of marklogic/develop. run this command <code>git log</code>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<h2>
+<a id="i-have-completed-with-my-task-and-i-want-it-push-this-changes-to-marklogicdevelop-what-steps-are-required-for-the-same" class="anchor" href="#i-have-completed-with-my-task-and-i-want-it-push-this-changes-to-marklogicdevelop-what-steps-are-required-for-the-same" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>I have completed with my task and I want it push this changes to marklogic/develop. What steps are required for the same?</h2>
+
+<blockquote>
+<ul>
+<li>As you know, we are following open source workflow so we will be creating a pull request to merge our changes with marklogic/develop.</li>
+<li><code>git status</code></li>
+<li>
+<code>git add filename or git add .</code> if there are some untracked changes needs to be committed.</li>
+<li>
+<code>git commit -m 'message'</code>.</li>
+<li>
+<code>git rebase -i marklogic/develop</code>. Here you will be asked to pick and squash some commit. We genereally keeps the first commint and squash rest commit to make it one commit.</li>
+<li>Read <a href="http://eli.thegreenplace.net/2014/02/19/squashing-github-pull-requests-into-a-single-commit">this</a> for better understanding.</li>
+<li>once you are done with this, create a pull request on github with marklogic/develop.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<h2>
+<a id="now-my-pr-is-merged-into-marklogicdevelop-what-step-should-i-follow-" class="anchor" href="#now-my-pr-is-merged-into-marklogicdevelop-what-step-should-i-follow-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Now my PR is merged into marklogic/develop, what step should I follow ?</h2>
+
+<blockquote>
+<p>Once your <strong>PR</strong> is in marklogic/develop, delete your branch and pull the latest marklogic/develop into your develop branch.</p>
+</blockquote>
+</li>
+<li>
+<h2>
+<a id="quick-commands-at-glance-" class="anchor" href="#quick-commands-at-glance-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick Commands at glance:-</h2>
+
+<blockquote>
+<ul>
+<li><code>git status</code></li>
+<li>
+<code>git add file-name</code> or <code>git add .</code> if any unstage changes.</li>
+<li><code>git commit -m 'message'</code></li>
+<li>
+<code>git fetch --all</code> If remote has changes then follow below step.</li>
+<li>
+<code>git rebase -i marklogic/develop</code>.</li>
+<li>squash commit and make it single.</li>
+<li>
+<code>git log</code> to check the history.</li>
+<li>
+<code>git push remote-name branch-name</code>. </li>
+</ul>
+</blockquote>
+</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/erashu212/ml-workflow">Ml-workflow</a> is maintained by <a href="https://github.com/erashu212">erashu212</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
