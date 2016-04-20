@@ -56,7 +56,9 @@ Once you have your account with you share your
                                                         <code>opsdirector</code> in your local account like 
                                                         <code>abc/opsdirector</code>.
                                                     </li>
-                                                    <li>Now start cloning this 
+													<li>Download git on your machine from <a href="https://git-scm.com/downloads">here</a>. Install it.
+													<li>Setup ssh keys as per steps provided in <a href="https://help.github.com/articles/generating-an-ssh-key/">this</a> guide. This setup is required to avoid Git credentials prompt whenever you commit, push or pull code.
+                                                    <li>Now start <a href="https://help.github.com/articles/cloning-a-repository/">cloning repository</a> 
                                                         <code>abc/opsdirector</code> on your local system.
                                                     </li>
                                                     <li>Once you are done with cloning , go with readme.md of 
@@ -66,45 +68,26 @@ Once you have your account with you share your
                                             </blockquote>
                                         </li>
                                         <li>
-                                            <h2>
+											<h2>
                                                 <a id="opsdirector-setup-is-done-on-my-local-system-what-should-steps-i-should-follow-before-start-of-actual-development" class="anchor" href="#opsdirector-setup-is-done-on-my-local-system-what-should-steps-i-should-follow-before-start-of-actual-development" aria-hidden="true">
                                                     <span aria-hidden="true" class="octicon octicon-link"></span>
-                                                </a>Opsdirector setup is done on my local system, what should steps I should follow before start of actual development.
+                                                </a>Basic Opsdirector setup is done on my local system, what steps should I follow before I start actual development.
                                             </h2>
-                                            <blockquote>
+											<blockquote>
                                                 <ul>
-                                                    <li>As we are following open source workflow, it means each team member will have opsdirector in their account and then they will start coding into their branch.</li>
-                                                    <li>It might required that you need to keep yourself in sync with other developer.</li>
-                                                    <li>To achieve the same, I would like you to run few commands.</li>
-                                                    <li>run 
-                                                        <code>git remote -v</code> : this command shows how many remote added.
-                                                    </li>
-                                                    <li>run 
-                                                        <code>git remote add remote_name remote_url</code> : this commnd will add remote with this 
-                                                        <code>remote_name</code>.
-                                                    </li>
-                                                    <li>run again 
-                                                        <code>git remote -v</code>.
-                                                    </li>
-                                                </ul>
-                                            </blockquote>
-                                        </li>
-                                        <li>
-                                            <h2>
-                                                <a id="i-have-setup-the-marklogic-along-with-the-remote-of-each-member-in-my-team-what-to-do-next" class="anchor" href="#i-have-setup-the-marklogic-along-with-the-remote-of-each-member-in-my-team-what-to-do-next" aria-hidden="true">
-                                                    <span aria-hidden="true" class="octicon octicon-link"></span>
-                                                </a>I have setup the marklogic along with the remote of each member in my team. What to do next.?
-                                            </h2>
-                                            <blockquote>
-                                                <ul>
-                                                    <li>Before start the work for day, we need to run some set of cammand to get the latest changes from remotes.</li>
-                                                    <li>run 
-                                                        <code>git fetch --all</code>.
-we always make sure that our branch which we are working upon must be rebased on to marklogic develop.
-                                                    </li>
-                                                </ul>
-                                            </blockquote>
-                                        </li>
+                                                    <li>You must add MarkLogic's opsdirector repository as a remote, because you will need it frequently to rebase, merge and compare changes with feature branches in your account. <a href="https://help.github.com/categories/managing-remotes/">Learn how to add and manage remotes.</a>
+													</li>
+													<li>Every day take the latest state of all remotes before you start your work. Use command <code>git fetch --all</code>.
+													</li>
+													<li>For every new feature that you are going to work on, create a branch from latest state of  abc/opsdirector/develop. By latest state of abc/opsdirector/develop I mean that abc/opsdirector/develop is in sync with latest commit in marklogic/opsdirector/develop branch.
+													</li>
+													<li>If you have already been working on a feature since few days and there are commits in marklogic/opsdirector/develop after you had created your feature branch, it is your responsibility to keep your branch in sync with marklogic/opsdirector/develop. 
+													</li>
+													<li>You can achieve this by rebasing your branch on marklogic/opsdirector/develop on daily basis. This will avoid lot of merge conflict that may arise because of delayed sync up.
+													</li>
+												</ul>
+											</blockquote>
+										</li>
                                         <li>
                                             <h2>
                                                 <a id="how-would-i-pull-the-latest-changes-of-marklogicdevelop-or-any-other-remote-branch-into-in-my-current-branch" class="anchor" href="#how-would-i-pull-the-latest-changes-of-marklogicdevelop-or-any-other-remote-branch-into-in-my-current-branch" aria-hidden="true">
